@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travel site</title>
+    <link rel="stylesheet" href="./css/project_login.css">
+    <link rel="shortcut icon" href="./images/login_fav.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <div class="container">
+        <form action="./project_home.html" name="f1" onsubmit="return Validateform()" method="get">
+            <fieldset>
+                <legend>Enter your credentials</legend>
+                <br>
+                <img src="./images/login.jpg" alt="no image">
+                <label for="em"></label>
+                <input type="email" id="em" name="em" placeholder="Email/Phone number">
+                <br>
+                <br>
+                <img src="./images/pass.png" alt="no image">
+                <label for="pass"></label>
+                <input type="password" id="pass" name="pass" placeholder="enter your password">
+                <br>
+                <br>
+                <input class="loginbtn" type="submit" value="LOGIN" id="login">
+                <br>
+                <label>
+                    <input type="checkbox" name="remember">Remember me</label>
+                <br>
+                <a href="./frgotpass.html" target="_blank">Forgot password</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+<script>
+
+    function Validateform() {
+        var x = document.f1.em.value;
+
+        var y = document.f1.pass.value;
+
+        if (x == "" && x == null) {
+            alert("name cant be blank.");
+            return false;
+        }
+        else if (y.length < 5 && y == "") {
+            alert("password cant be blank and also be atleast 5 characters long:");
+            return false;
+        }
+        else {
+            console.log(x + "" + y);
+            return true;
+        }
+    }
+
+</script>
+
+</html>

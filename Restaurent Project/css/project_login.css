@@ -1,0 +1,64 @@
+body {
+    background-size: cover;
+    background-image: url(/images/loginback.jpg);
+}
+
+.container {
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0px;
+    border-left: none;
+    border-right: none;
+    margin: auto;
+}
+
+#em,
+#pass {
+    padding: 5px;
+    color: blue;
+    font-family: cursive;
+    font-size: x-large;
+}
+
+#em:focus,
+#pass:focus {
+    background-color: lightpink;
+}
+
+img {
+    height: 20px;
+    width: 20px;
+}
+
+legend {
+    letter-spacing: 2px;
+    color: red;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    font-size: medium;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+.loginbtn {
+    color: indigo;
+    background-color: yellowgreen;
+    width: 30%;
+    cursor: pointer;
+    box-shadow: 0 .3rem .5rem 0 black;
+    transition: all 1sec ease-in-out;
+}
+
+.loginbtn:hover {
+    opacity: 1.0;
+    transform: scale(2);
+}

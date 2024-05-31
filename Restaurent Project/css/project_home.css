@@ -1,0 +1,403 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.navigation {
+  background-color: wheat;
+}
+
+#logo img {
+  margin: 1rem 1rem;
+  height: 4rem;
+  width: 7rem;
+  animation-name: animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform: rotate(180deg);
+}
+
+@keyframes animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+
+#navbar {
+  display: inline-block;
+  position: absolute;
+  margin: 1rem 0.5rem;
+}
+
+#navbar a {
+  font-size: x-large;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+#navbar a:hover {
+  background-color: yellowgreen;
+  color: blue;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  border-radius: 10px;
+  background-color: wheat;
+  color: black;
+  padding: 1rem;
+  font-size: x-large;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: yellowgreen;
+  color: blue;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  max-height: max-content;
+  box-shadow: 0px 8px 16px 0px black;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: fantasy
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button {
+  display: inline-flex;
+  padding: 3px;
+  border: none;
+  float: right;
+  margin: 1.5rem 1rem;
+  position: relative;
+  transition: all 2sec ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 7px 5px 10px red;
+  transform: translateY(2px);
+}
+
+#b1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#b2 {
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#b1,
+#b2 {
+  cursor: pointer;
+  background-color: greenyellow;
+  border: 2px solid black;
+  width: 5rem;
+  height: 2rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 10rem;
+}
+
+.info {
+  margin-top: 1rem;
+}
+
+.home .info h1 {
+  border: 2px solid black;
+  font-size: 3vw;
+  color: black;
+  text-shadow: 0 .3rem .5rem #000;
+  text-align: center;
+  background: lightcoral;
+}
+
+.home .info p {
+  font-size: 1.5vw;
+  color: black;
+  padding-left: 2rem;
+}
+
+.heading {
+  background: lightcoral;
+  border: 2px solid black;
+  font-size: 3vw;
+  color: black;
+  text-shadow: 0 .3rem .5rem #000;
+  text-align: center;
+}
+
+.gallery {
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 20rem;
+  height: 30rem;
+  margin: 2rem;
+  position: relative;
+}
+
+.image {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+}
+
+.image:hover {
+  border: 2px solid red;
+  border-radius: 10%;
+  cursor: pointer;
+  height: 400px;
+  width: 350px;
+  transform: scale(1);
+}
+
+.discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: block;
+  height: 3.5rem;
+  width: 6rem;
+  background: #ff3300;
+  color: #fff;
+  line-height: 4rem;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.desc {
+  text-align: center;
+  text-transform: uppercase;
+  color: blue;
+  width: 250px;
+  border: 1px dotted red;
+  font-style: oblique;
+}
+
+.desc:hover {
+  background-color: yellow;
+}
+
+.gallery1 {
+  min-height: 100vh
+}
+
+.heading1 {
+  background: lightcoral;
+  border: 2px solid black;
+  font-size: 3vw;
+  color: black;
+  text-shadow: 0 .3rem .5rem #000;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 20rem;
+  height: 15rem;
+  margin: 2rem;
+  position: relative;
+}
+
+.myvideo {
+  height: 15rem;
+  width: 20rem;
+  object-fit: cover;
+}
+
+
+/*first footer styling*/
+.myfooter {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.fcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+iframe {
+  width: 90%;
+  height: 10rem;
+  filter: invert(100%);
+}
+
+.f1 {
+  margin: 1rem;
+}
+
+.f1 .ph {
+  font-size: 1.5rem;
+  display: inline;
+  position: relative;
+  justify-content: baseline;
+}
+
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: inherit;
+  transform: translateY(-50%);
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: inline;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: whitesmoke;
+}
+
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.instagram {
+  background: yellowgreen;
+  color: white;
+}
+
+.pinterest {
+  background: brown;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.swiggylogo {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#myBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: red;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555;
+  /* Add a dark-grey background on hover */
+}

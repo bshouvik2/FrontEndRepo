@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Page</title>
+    <link rel="stylesheet" href="./css/regpage.css">
+    <link rel="shortcut icon" href="./images/index.png" type="image/x-icon">
+    <style>
+        body {
+            background-size: cover;
+            background-image: url(/images/regpage.jpeg);
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            margin: auto;
+            border: 2px dashed black;
+            width: 50%;
+            text-align: center;
+            padding: 0px 0px;
+        }
+
+        h1 {
+            display: grid;
+            text-align: center;
+            text-decoration: underline;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bolder;
+            color: black;
+        }
+
+        label {
+            font-size: larger;
+            display: grid;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            text-align: center;
+            width: 50%;
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            color: blue;
+            font-size: large;
+            font-family: cursive;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <hr>
+        <form action="./new.html" target="_blank" name="myform" onsubmit="return Validateform()" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Sam">
+            <br>
+            <br>
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required placeholder="sam123@gmail.com">
+            <br>
+            <br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required placeholder="7395969907">
+            <br>
+            <br>
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" required placeholder="*****">
+            <br>
+            <br>
+            <label for="reenter-password">Re-enter Password:</label>
+            <input type="password" id="reenter-password" name="reenter-password" required placeholder="*****">
+            <br>
+            <br>
+            <br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="Female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+<script>
+    function Validateform() {
+        var x = document.forms['myform']["username"].value;
+
+        var y = document.forms['myform']["email"].value;
+
+        var z = document.forms['myform']["mobile"].value;
+
+        var pd = document.forms['myform']["password"].value;
+
+        var pd1 = document.forms['myform']["reenter-password"].value;
+
+        if (x == "" && x==null) {
+            alert("plz gve username");
+            return false;
+        }
+        else if (y == "" && y == null) {
+            alert("pass should be between 6 and 12 digits");
+            return true;
+        }
+        else if (pd === pd1) {
+            alert("both passwrd matches");
+            return true;
+        }
+        else if (z.length != 10) {
+            alert("only 10 digits accepted");
+            return false;
+        }
+        else {
+            alert("Succesfully registered");
+            console.log(x+ "" +y+ "" + "" +pd+ ""+z);
+        }
+    }
+
+</script>
+
+</html>

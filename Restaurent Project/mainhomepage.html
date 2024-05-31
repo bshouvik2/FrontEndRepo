@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body style="background:url(./images/wall.jpg)" ;>
+    <canvas id="canvas" width="100" height="100" style="background-color:orangered;"> </canvas>
+    <img src="./images/hello.gif" alt="hello">
+    <a href="./project_home.html"><button class="block">Welcome to our Project</button></a>
+
+    <center>
+        <button class="mypic" onclick="openNav()">Our Project Members</button>
+    </center>
+    <br>
+    <center>
+        <button class="mypic1" onclick="openNavbar()">Surprise</button>
+    </center>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-sharp fa-regular fa-xmark"></i></a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <div>
+                <img src="./images/RAKSITHA.jpg" alt="frst group mem" height="250" width="250">
+                <p class="heading">RAKSHITA</p>
+            </div>
+            <div>
+                <img src="./images/ME.JPG" alt="2nd group mem" height="250" width="250">
+                <p class="heading">SOUVIK</p>
+            </div>
+            <div>
+                <img src="./images/pavithra.png" alt="3rd group mem" height="250" width="250">
+                <p class="heading">PAVITHRA</p>
+            </div>
+            <div>
+                <img src="./images/vidya.jpeg" alt="4th group mem" height="250" width="250">
+                <p class="heading">VIDYA</p>
+            </div>
+        </div>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+
+        <div id="myNavopen" class="overlay1">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn1" onclick="closeNavbar()"><i class="fa-sharp fa-regular fa-xmark"></i></a>
+
+            <!-- Overlay content-2nd -->
+            <div class="open">
+                <p class="heading1">Thanks for giving us the opportunity to present our project</p>
+                <img class="sam" src="./images/sam.jpg" alt="our project mentor">
+                <p class="desc">Sameer Sir</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<style>
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont,
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #canvas {
+        float: right;
+        margin: 1rem;
+    }
+
+    img {
+        display: flex;
+        margin: auto;
+    }
+
+    .block {
+        display: block;
+        margin: 1rem auto;
+        width: 60%;
+        height: 50%;
+        padding: 2rem;
+        font-weight: 500;
+        font-size: x-large;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .block:hover {
+        border-color: darkmagenta;
+        background-color: lightpink;
+    }
+
+    .mypic {
+        margin-right: 7rem;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    .mypic:hover {
+        background-color: lightpink;
+        border-color: darkmagenta;
+    }
+
+    .mypic1 {
+        display: flex;
+        padding: 1rem;
+        border-radius: 50%;
+        margin: 0.5rem 6rem 0 0;
+        cursor: pointer;
+        border-color: black;
+        animation-name: sir;
+        animation-duration: 4s;
+        animation-iteration-count: 5;
+    }
+
+    @keyframes sir {
+        0% {
+            background-color: red;
+        }
+
+        25% {
+            background-color: yellow;
+        }
+
+        50% {
+            background-color: blue;
+        }
+
+        100% {
+            background-color: green;
+        }
+    }
+
+    .mypic1:active {
+        background-color: lightsalmon;
+        border-color: darkorange;
+    }
+
+    /* The Overlay (background) */
+    .overlay {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */
+        height: 100%;
+        width: 0;
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0);
+        /* Black fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/opacity */
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    .overlay-content {
+        display: flex;
+        position: relative;
+        top: 15%;
+        /* 25% from the top */
+        width: 100%;
+        /* 100% width */
+        text-align: center;
+        /* Centered text/links */
+        justify-content: center;
+        /* 30px top margin to avoid conflict with the close button on smaller screens */
+        padding: 0%;
+    }
+
+    .overlay .overlay-content .heading {
+        padding: 15px;
+        position: inherit;
+        display: inline-flex;
+        font-style: italic;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* Display block instead of inline */
+        transition: 0.3s;
+        color: antiquewhite;
+        font-size: x-large;
+    }
+
+    .overlay-content img {
+        padding: 1rem;
+    }
+
+    /* The navigation links inside the overlay */
+    .overlay a {
+        display: block;
+        /* Display block instead of inline */
+        transition: 0.3s;
+        /* Transition effects on hover (color) */
+    }
+
+    /* Position the close button (top right corner) */
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        color: red;
+        border: none;
+    }
+
+    .overlay1 {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0);
+        /* Black fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/opacity */
+        overflow-y: hidden;
+        /* Disable horizontal scroll */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    .overlay1 .open {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 10%;
+        /* 25% from the top */
+        width: 100%;
+        /* 100% width */
+        text-align: center;
+        /* Centered text/links */
+        justify-content: inherit;
+        /* 30px top margin to avoid conflict with the close button on smaller screens */
+        height: auto;
+    }
+
+    .overlay1 .open .heading1 {
+        text-align: center;
+        color: white;
+        font-size: x-large;
+        font-style: italic;
+        display: flex;
+        margin: 0 auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .overlay1 .open .desc {
+        color:white;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        font-style: italic;
+        font-size: x-large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .overlay1 .open .sam {
+        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+        display: flex;
+
+    }
+
+    .overlay1 .closebtn1 {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        color: red;
+    }
+</style>
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+    function openNavbar() {
+        document.getElementById("myNavopen").style.height = "100%";
+    }
+
+    function closeNavbar() {
+        document.getElementById("myNavopen").style.height = "0%";
+    }
+
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    let radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90;
+    setInterval(drawClock, 1000);
+
+    function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius);
+    }
+
+    function drawFace(ctx, radius) {
+        const grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+        grad.addColorStop(0, '#333');
+        grad.addColorStop(0.5, 'white');
+        grad.addColorStop(1, '#333');
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = radius * 0.1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+        ctx.fillStyle = '#333';
+        ctx.fill();
+    }
+
+    function drawNumbers(ctx, radius) {
+        ctx.font = radius * 0.15 + "px arial";
+        ctx.textBaseline = "middle";
+        ctx.textAlign = "center";
+        for (let num = 1; num < 13; num++) {
+            let ang = num * Math.PI / 6;
+            ctx.rotate(ang);
+            ctx.translate(0, -radius * 0.85);
+            ctx.rotate(-ang);
+            ctx.fillText(num.toString(), 0, 0);
+            ctx.rotate(ang);
+            ctx.translate(0, radius * 0.85);
+            ctx.rotate(-ang);
+        }
+    }
+
+    function drawTime(ctx, radius) {
+        const now = new Date();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
+        //hour
+        hour = hour % 12;
+        hour = (hour * Math.PI / 6) +
+            (minute * Math.PI / (6 * 60)) +
+            (second * Math.PI / (360 * 60));
+        drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+        //minute
+        minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+        drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+        // second
+        second = (second * Math.PI / 30);
+        drawHand(ctx, second, radius * 0.9, radius * 0.02);
+    }
+
+    function drawHand(ctx, pos, length, width) {
+        ctx.beginPath();
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.moveTo(0, 0);
+        ctx.rotate(pos);
+        ctx.lineTo(0, -length);
+        ctx.stroke();
+        ctx.rotate(-pos);
+    }
+</script>
+
+</html>
